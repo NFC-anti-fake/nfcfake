@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>认证</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--头部-->
+<header class="nfc_sbanner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-sm-10 col-xs-10">
+                <div class="nfc_slogo">
+                    <a href="#">
+                        <img class="" src="images/NFC_logo.png"/>
+                        <span>开发者平台</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2 nfc_logoff">
+                <a href="#" class="btn btn-border active" data-toggle="modal" data-target=".bs-example-modal-sm"
+                   role="button">注销</a>
+            </div>
+        </div>
+    </div>
+</header>
+<!--中间部分-->
+<section>
+    <div class="container content-wrap">
+        <div class="row">
+            <aside class="col-md-3 col-sm-3 col-xs-12 sidebar">
+                <div class="navbar sidenav">
+                    <div class="col-xs-1 col-sm-12 col-md-12 paddingnone">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#navbar-collapsible" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="col-xs-6 col-sm-12 col-md-12 post-head paddingnone padleft">
+                        <img src="images/user_header.png"/>
+                        <p>服务状态：<span>正常</span></p>
+                    </div>
+                    <div class="col-xs-5 col-sm-12 col-md-12 list_approve paddingnone">
+                        <ul>
+                            <li class="col-md-4 col-sm-4 col-xs-4 li_1"><a href="shops_approve.html"><img
+                                    src="images/approve_ico1.png"><span>认证</span></a></li>
+                            <li class="col-md-4 col-sm-4 col-xs-4 li_2"><a href="shops_message.html"><img
+                                    src="images/approve_ico2.png"><span>消息</span></a></li>
+                            <li class="col-md-4 col-sm-4 col-xs-4 li_3"><a href="shops_password.html"><img
+                                    src="images/approve_ico3.png"><Span>密码</Span></a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-collapse collapse list_nav paddingnone" id="navbar-collapsible" aria-expanded="false">
+                        <div class="col-xs-12 col-sm-12 col-md-12 paddingnone">
+                            <ul>
+                                <li><a href="shops_photolist.html"><span
+                                        class="glyphicon glyphicon-th-list"></span>相册列表</a></li>
+                                <li class="hover"><a href="shops_addphoto.html"><span
+                                        class="glyphicon glyphicon-folder-close"></span>新建相册</a></li>
+                                <li><a href="shops_api.html"><span class="glyphicon glyphicon-file"></span>API文档</a>
+                                </li>
+                                <li><a href="shops_setting.html"><span class="glyphicon glyphicon-retweet"></span>参数配置</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!--右側內容-->
+            <main class="col-md-9 col-sm-9 col-xs-12 main-content">
+                <div class="main_wicket shops_cardprofile">
+                    <h2>爱刷（北京）科技有限公司 - 您的实名认证信息已经通过！</h2>
+                    <div class="approve">
+                        <form>
+                            <table class="table table-responsive">
+                                <tr>
+                                    <td colspan="2" class="td_title">企业基本信息</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="gongshangname">工商注册名称</label>
+                                            <input type="text" class="form-control" id="gongshangname"
+                                                   placeholder="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="tell">公司固定电话</label>
+                                            <input type="text" class="form-control" id="tell" placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="legalname">法人姓名</label>
+                                            <input type="text" class="form-control" id="legalname" placeholder="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="legalcarID">法人身份证号</label>
+                                            <input type="text" class="form-control" id="legalcarID"
+                                                   placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="agentname">经办人姓名</label>
+                                            <input type="text" class="form-control" id="agentname" placeholder="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="agenttel">经办人电话</label>
+                                            <input type="text" class="form-control" id="agenttel" placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="licensenumber">营业执照注册号</label>
+                                            <input type="text" class="form-control" id="licensenumber"
+                                                   placeholder="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="taxnumber">税务登记证号</label>
+                                            <input type="text" class="form-control" id="taxnumber" placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="oarganizationnumber">组织机构代码编号</label>
+                                            <input type="text" class="form-control" id="oarganizationnumber" placeholder="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="city">省市</label>
+                                            <input type="text" class="form-control" id="city" placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="importbussess">偏重业务</label>
+                                            <input type="text" class="form-control" id="importbussess"
+                                                   placeholder="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="companyaddress">公司联系地址</label>
+                                            <input type="text" class="form-control" id="companyaddress"
+                                                   placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="td_title">上传材料</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="td_file">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <aside class="col-md-3 col-sm-4 col-xs-6">
+                                                    <p>营业执照</p>
+                                                    <a class="input-file" href="javascript:void(0);">
+                                                        <input type="file" name="file1" id="file1"/>
+                                                    </a>
+                                                </aside>
+                                                <aside class="col-md-3 col-sm-4 col-xs-6">
+                                                    <p>税务登记证</p>
+                                                    <a class="input-file" href="javascript:void(0);">
+                                                        <input type="file" name="file2" id="file2" />
+                                                    </a>
+                                                </aside>
+                                                <aside class="col-md-3 col-sm-4 col-xs-6">
+                                                    <p>组织机构代码</p>
+                                                    <a class="input-file" href="javascript:void(0);">
+                                                        <input type="file" name="file3" id="file3" />
+                                                    </a>
+                                                </aside>
+                                                <aside class="col-md-3 col-sm-4 col-xs-6">
+                                                    <p>卡户行许可证</p>
+                                                    <a class="input-file" href="javascript:void(0);">
+                                                        <input type="file" name="file4" id="file4"/>
+                                                    </a>
+                                                </aside>
+                                                <aside class="col-md-3 col-sm-4 col-xs-6">
+                                                    <p>法人身份证照</p>
+                                                    <a class="input-file" href="javascript:void(0);">
+                                                        <input type="file" name="file5" id="file5" />
+                                                    </a>
+                                                </aside>
+                                                <aside class="col-md-3 col-sm-4 col-xs-6">
+                                                    <p>开户回执单</p>
+                                                    <a class="input-file" href="javascript:void(0);">
+                                                        <input type="file" name="file6" id="file6"/>
+                                                    </a>
+                                                </aside>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="td_title">企业对公账户信息</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="settlement">结算账户名称</label>
+                                            <input type="input" class="form-control" id="settlement" placeholder="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="khhxnumber">开户行许可核准号</label>
+                                            <input type="input" class="form-control" id="khhxnumber" placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="citys">省市</label>
+                                            <input type="input" class="form-control" id="citys" placeholder="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="depositbank">开户银行</label>
+                                            <input type="input" class="form-control" id="depositbank" placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="bankbranch">开户行支行</label>
+                                            <input type="input" class="form-control" id="bankbranch" placeholder="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="jiesuanbanknumber">结算银行卡号</label>
+                                            <input type="input" class="form-control" id="jiesuanbanknumber" placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="bussessmodel">业务模式</label>
+                                            <input type="input" class="form-control" id="bussessmodel" placeholder="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="teamsize">团队规模</label>
+                                            <input type="input" class="form-control" id="teamsize" placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="goodsprice">商品单价均价格范围</label>
+                                            <input type="input" class="form-control" id="goodsprice" placeholder="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="skyugu">12月内收款预估</label>
+                                            <input type="input" class="form-control" id="skyugu" placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="buspersonname">业务联系人姓名</label>
+                                            <input type="input" class="form-control" id="buspersonname" placeholder="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="buspersontel">业务联系人电话</label>
+                                            <input type="input" class="form-control" id="buspersontel" placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="servicename">客服联系人姓名</label>
+                                            <input type="input" class="form-control" id="servicename" placeholder="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="servicetel">客服联系人电话</label>
+                                            <input type="input" class="form-control" id="servicetel" placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="skillname">技术联系人姓名</label>
+                                            <input type="input" class="form-control" id="skillname" placeholder=""/>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="skilltel">技术联系人电话</label>
+                                            <input type="input" class="form-control" id="skilltel" placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="btn_sumbit">
+                                        <a href="#" class="btn btn-warning">取消修改</a>
+                                    </td>
+                                    <td class="btn_sumbit">
+                                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-delete" role="button">
+                                        保存并提交审核</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</section>
+<!--底部-->
+<footer>
+    <div class="container">
+        <p>2012-2016 爱刷（北京）科技有限公司（aishuapay.com）版权所有 京ICP备14052897号-2</p>
+    </div>
+</footer>
+<!-- 注销 modal -->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content logooff_modal">
+            <P class="p_info">是否注销此账户?</P>
+
+            <div class="modal-footer modal_select">
+                <div class="btn_left">
+                    <a href="#" data-dismiss="modal">否</a>
+                </div>
+                <div class="btn_right">
+                    <a href="#">是</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--认证 modal -->
+<div class="modal fade cardprofile_modal bs-example-delete" tabindex="-1" role="dialog" aria-labelledby="bs-example-delete">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content push_modal">
+            <P class="p_info">提示</P>
+            <p class="p_sure"><span class="glyphicon glyphicon-ok"></span>认证成功</p>
+        </div>
+    </div>
+</div>
+<!--图片上传预览-->
+<script type="text/javascript">
+    $(function () {
+        $("input[type='file']").each(function () {
+            $(this).change(function () {
+                var prevDiv = $(this).parent();
+                preview(this, prevDiv);
+            });
+        });
+        function preview(file, prevDiv) {
+            if (file.files && file.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (evt) {
+                    prevDiv.append('<img src="'+evt.target.result+'">');
+                }
+                reader.readAsDataURL(file.files[0]);
+            }
+            else {
+                prevDiv.append('<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + file.value + '\'"></div>');
+            }
+        }
+    });
+</script>
+</body>
+</html>

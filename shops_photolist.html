@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>相册列表</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--头部-->
+<header class="nfc_sbanner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-sm-10 col-xs-10">
+                <div class="nfc_slogo">
+                    <a href="#">
+                        <img class="" src="images/NFC_logo.png"/>
+                        <span class="sp1">云平台</span>
+                        <span>商家内容管理后台</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2 nfc_logoff">
+                <a href="#" class="btn btn-border active" data-toggle="modal" data-target=".bs-example-modal-sm"
+                   role="button">注销</a>
+            </div>
+        </div>
+    </div>
+</header>
+<!--中间部分-->
+<section>
+    <div class="container content-wrap">
+        <div class="row">
+            <aside class="col-md-3 col-sm-3 col-xs-12 sidebar">
+                <div class="navbar sidenav">
+                    <div class="col-xs-1 col-sm-12 col-md-12 paddingnone">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#navbar-collapsible" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="col-xs-6 col-sm-12 col-md-12 post-head paddingnone padleft">
+                        <img src="images/user_header.png"/>
+                        <p>服务状态：<span>正常</span></p>
+                    </div>
+                    <div class="col-xs-5 col-sm-12 col-md-12 list_approve paddingnone">
+                        <ul>
+                            <li class="col-md-4 col-sm-4 col-xs-4 li_1"><a href="shops_approve.html"><img
+                                    src="images/approve_ico1.png"><span>认证</span></a></li>
+                            <li class="col-md-4 col-sm-4 col-xs-4 li_2"><a href="shops_message.html"><img
+                                    src="images/approve_ico2.png"><span>消息</span></a></li>
+                            <li class="col-md-4 col-sm-4 col-xs-4 li_3"><a href="shops_password.html"><img
+                                    src="images/approve_ico3.png"><Span>密码</Span></a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-collapse collapse list_nav paddingnone" id="navbar-collapsible" aria-expanded="false">
+                        <div class="col-xs-12 col-sm-12 col-md-12 paddingnone">
+                            <ul>
+                                <li><a href="shops_photolist.html"><span
+                                        class="glyphicon glyphicon-th-list"></span>相册列表</a></li>
+                                <li class="hover"><a href="shops_addphoto.html"><span
+                                        class="glyphicon glyphicon-folder-close"></span>新建相册</a></li>
+                                <li><a href="shops_api.html"><span class="glyphicon glyphicon-file"></span>API文档</a>
+                                </li>
+                                <li><a href="shops_setting.html"><span class="glyphicon glyphicon-retweet"></span>参数配置</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!--右側內容-->
+            <main class="col-md-9 col-sm-9 col-xs-12 main-content">
+                <div class="main_wicket shops_cardprofile">
+                    <h2>>新建相册</h2>
+                    <form class="form-horizontal cardprofile_form1">
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" id="inputurl" placeholder="请输入要查询的名称或类型">
+                            <div class="input_date">
+                                <div class="col-md-6">
+                                    <input type="text" value="2016-05-01"  class="form-control form_datetime">
+                                </div>
+                                <div class="col-md-1 span_colmd">至</div>
+                                <div class="col-md-5">
+                                    <input type="text" value="2016-06-28"  class="form-control form_datetime">
+                                </div>
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $('.form_datetime').datetimepicker({
+　　                                        minView: "month", //选择日期后，不会再跳转去选择时分秒
+                                        　　format: "yyyy-mm-dd", //选择日期后，文本框显示的日期格式
+                                        　　autoclose:true //选择日期后自动关闭
+                                       });
+                                    });
+                                </script>
+                            </div>
+                            <a  href="#" class="btn btn-primary btn_select">查询</a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#" class="btn btn_createcard">刷新</a>
+                        </div>
+                    </form>
+                    <table class="table table-hover table-bordered tb_cardprofile">
+                        <thead>
+                        <tr class="theader">
+                            <td>创建时间</td>
+                            <td>相册名称</td>
+                            <td>顾客名称</td>
+                            <td>摄影师</td>
+                            <td>相册链接</td>
+                            <td>操作</td>
+                            <td>标签写入</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2016-05-02</td>
+                            <td>侯志华的相册</td>
+                            <td>侯志华</td>
+                            <td>田蕾</td>
+                            <td><a href="#">http://www.baidu.com</a></td>
+                            <td>
+                                <a href="#" class="btn">预览</a>
+                                <a href="#" class="btn">详情</a>
+                                <a href="#" class="btn">编辑</a>
+                                <a href="#" class="btn" data-toggle="modal" data-target=".bs-example-delete" role="button">删除</a>
+                            </td>
+                            <td>写入</td>
+                        </tr>
+                        <tr>
+                            <td>2016-05-02</td>
+                            <td>侯志华的相册</td>
+                            <td>侯志华</td>
+                            <td>田蕾</td>
+                            <td><a href="#">http://www.baidu.com</a></td>
+                            <td>
+                                <a href="#" class="btn">预览</a>
+                                <a href="#" class="btn">详情</a>
+                                <a href="#" class="btn">编辑</a>
+                                <a href="#" class="btn" data-toggle="modal" data-target=".bs-example-delete" role="button">删除</a>
+                            </td>
+                            <td>写入</td>
+                        </tr>
+                        <tr>
+                            <td>2016-05-02</td>
+                            <td>侯志华的相册</td>
+                            <td>侯志华</td>
+                            <td>田蕾</td>
+                            <td><a href="#">http://www.baidu.com</a></td>
+                            <td>
+                                <a href="#" class="btn">预览</a>
+                                <a href="#" class="btn">详情</a>
+                                <a href="#" class="btn">编辑</a>
+                                <a href="#" class="btn" data-toggle="modal" data-target=".bs-example-delete" role="button">删除</a>
+                            </td>
+                            <td>写入</td>
+                        </tr>
+                        <tr>
+                            <td>2016-05-02</td>
+                            <td>侯志华的相册</td>
+                            <td>侯志华</td>
+                            <td>田蕾</td>
+                            <td><a href="#">http://www.baidu.com</a></td>
+                            <td>
+                                <a href="#" class="btn">预览</a>
+                                <a href="#" class="btn">详情</a>
+                                <a href="#" class="btn">编辑</a>
+                                <a href="#" class="btn" data-toggle="modal" data-target=".bs-example-delete" role="button">删除</a>
+                            </td>
+                            <td>写入</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+</section>
+<!--底部-->
+<footer>
+    <div class="container">
+        <p>2012-2016 爱刷（北京）科技有限公司（aishuapay.com）版权所有 京ICP备14052897号-2</p>
+    </div>
+</footer>
+<!-- 注销 modal -->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content logooff_modal">
+            <P class="p_info">是否注销此账户?</P>
+            <div class="modal-footer modal_select">
+                <div class="btn_left">
+                    <a href="#" data-dismiss="modal">否</a>
+                </div>
+                <div class="btn_right">
+                    <a href="#">是</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--删除 modal -->
+<div class="modal fade cardprofile_modal bs-example-delete" tabindex="-1" role="dialog" aria-labelledby="bs-example-delete">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content push_modal">
+            <P class="p_info">提示</P>
+            <p class="p_sure"><span class="glyphicon glyphicon-ok"></span>删除成功</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

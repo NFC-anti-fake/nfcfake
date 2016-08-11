@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>新建相册</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/validator/jquery.validator.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/validator/jquery.validator.min.js"></script>
+    <script type="text/javascript" src="js/validator/local/zh-CN.js"></script>
+    <script type="text/javascript" src="js/shopsjs.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--头部-->
+<header class="nfc_sbanner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-sm-10 col-xs-10">
+                <div class="nfc_slogo">
+                    <a href="#">
+                        <img class="" src="images/NFC_logo.png"/>
+                        <span class="sp1">云平台</span>
+                        <span>商家内容管理后台</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-2 nfc_logoff">
+                <a href="#" class="btn btn-border active" data-toggle="modal" data-target=".bs-example-modal-sm"
+                   role="button">注销</a>
+            </div>
+        </div>
+    </div>
+</header>
+<!--中间部分-->
+<section>
+    <div class="container content-wrap">
+        <div class="row">
+            <aside class="col-md-3 col-sm-3 col-xs-12 sidebar">
+                <div class="navbar sidenav">
+                    <div class="col-xs-1 col-sm-12 col-md-12 paddingnone">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#navbar-collapsible" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="col-xs-6 col-sm-12 col-md-12 post-head paddingnone padleft">
+                        <img src="images/user_header.png"/>
+
+                        <p>服务状态：<span>正常</span></p>
+                    </div>
+                    <div class="col-xs-5 col-sm-12 col-md-12 list_approve paddingnone">
+                        <ul>
+                            <li class="col-md-4 col-sm-4 col-xs-4 li_1"><a href="shops_approve.html"><img
+                                    src="images/approve_ico1.png"><span>认证</span></a></li>
+                            <li class="col-md-4 col-sm-4 col-xs-4 li_2"><a href="shops_message.html"><img
+                                    src="images/approve_ico2.png"><span>消息</span></a></li>
+                            <li class="col-md-4 col-sm-4 col-xs-4 li_3"><a href="shops_password.html"><img
+                                    src="images/approve_ico3.png"><Span>密码</Span></a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-collapse collapse list_nav paddingnone" id="navbar-collapsible"
+                         aria-expanded="false">
+                        <div class="col-xs-12 col-sm-12 col-md-12 paddingnone">
+                            <ul>
+                                <li><a href="shops_photolist.html"><span
+                                        class="glyphicon glyphicon-th-list"></span>相册列表</a></li>
+                                <li class="hover"><a href="shops_addphoto.html"><span
+                                        class="glyphicon glyphicon-folder-close"></span>新建相册</a></li>
+                                <li><a href="shops_api.html"><span class="glyphicon glyphicon-file"></span>API文档</a>
+                                </li>
+                                <li><a href="shops_setting.html"><span class="glyphicon glyphicon-retweet"></span>参数配置</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!--右側內容-->
+            <main class="col-md-9 col-sm-9 col-xs-12 main-content">
+                <div class="main_wicket shops_cardprofile">
+                    <h2 class="card_listh2">>新建相册</h2>
+                    <P class="card_listback"><a href="shops_cardprofile.html">返回</a></P>
+                    <div class="cardadd_info">
+                        <div class="col-lg-12 cardadd_right">
+                            <form action="#" class="form-horizontal" id="add_photo">
+                                <div class="form-group">
+                                    <label class="col-sm-2 card_info">相册信息</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="photoname" class="col-sm-2 control-label">相册名称</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="photoname" name="photoname" placeholder="相册名称">
+                                        <span class="msg-box" for="photoname"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="clientname" class="col-sm-2 control-label">客户姓名</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="clientname" name="clientname" placeholder="客户姓名">
+                                        <span class="msg-box" for="clientname"></span>
+                                    </div>
+                                    <label for="clientel" class="col-sm-2 control-label" style="text-align: right">手机号</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="clientel" name="clientel" placeholder="手机号">
+                                        <span class="msg-box" for="clientel"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for=" Photographer" class="col-sm-2 control-label">摄影师</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="Photographer" name="Photographer" placeholder="摄影师姓名">
+                                        <span class="msg-box" for="Photographer"></span>
+                                    </div>
+                                    <label for="photoseoname" class="col-sm-2 control-label" style="text-align: right">图像优化师</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="photoseoname" name="photoseoname" placeholder="优化师姓名">
+                                        <span class="msg-box" for="photoseoname"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">相册logo</label>
+                                    <div class="col-sm-9" style="padding-top: 10px;">
+                                        <a class="input-file" href="javascript:void(0);">
+                                            上传<input type="file" name="file" id="photoUpload" onchange="preview(this)"/>
+                                        </a>
+                                        <p class="p_load">图片建议大小240*240，上传图片
+                                            仅支持jpg/png格式，大小不超过
+                                            2M</p>
+                                        <div class="card_userlogo" id="preview"><img src="images/user_header.png"/></div>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="phototype" class="col-sm-2 control-label">相册类型</label>
+                                    <div class="col-sm-3">
+                                        <select class="form-control" id="phototype">
+                                            <option>普通相册</option>
+                                            <option>豪华相册</option>
+                                            <option>高档相册</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="photolink" class="col-sm-2 control-label">相册链接</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="photolink" name="photolink" placeholder="http://www.baidu.com">
+                                        <span class="msg-box" for="photolink"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="photocreatname" class="col-sm-2 control-label">创建人</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="photocreatname" name="photocreatname"  placeholder="电子相册创建人">
+                                        <span class="msg-box" for="photocreatname"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="photootherinfo" class="col-sm-2 control-label">其他信息</label>
+                                    <div class="col-sm-8">
+                                        <textarea class="form-control" id="photootherinfo" rows="5" placeholder="其他信息填写"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12 col-lg-offset-2">
+                                        <button type="submit" class="btn btn-warning addphoto_btn">保存相册</button>
+                                        <a type="button" href="shops_photoreadin.html" class="btn btn-primary">保存并写入标签</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</section>
+<!--底部-->
+<footer>
+    <div class="container">
+        <p>2012-2016 爱刷（北京）科技有限公司（aishuapay.com）版权所有 京ICP备14052897号-2</p>
+    </div>
+</footer>
+<!-- 注销 modal -->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content logooff_modal">
+            <P class="p_info">是否注销此账户?</P>
+
+            <div class="modal-footer modal_select">
+                <div class="btn_left">
+                    <a href="#" data-dismiss="modal">否</a>
+                </div>
+                <div class="btn_right">
+                    <a href="#">是</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--保存相册 modal -->
+<div class="modal fade cardprofile_modal bs-cardprofile-keep" tabindex="-1" role="dialog"
+     aria-labelledby="bs-cardprofile-keep" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content push_modal">
+            <P class="p_info">提示</P>
+            <p class="p_sure"><span class="glyphicon glyphicon-ok"></span>相册保存成功</p>
+        </div>
+    </div>
+</div>
+<!--图片上传预览-->
+<script type="text/javascript">
+    function preview(file) {
+        var prevDiv = document.getElementById('preview');
+        if (file.files && file.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (evt) {
+                prevDiv.innerHTML = '<img src="' + evt.target.result + '" />';
+            }
+            reader.readAsDataURL(file.files[0]);
+        }
+        else {
+            prevDiv.innerHTML = '<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + file.value + '\'"></div>';
+        }
+    }
+</script>
+</body>
+</html>
